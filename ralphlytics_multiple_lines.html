@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>RaphAlytics</title>
+        <script src="js/vendor/raphael-min.js"></script>
+        <script src="js/vendor/popup.js"></script>
+        <script src="js/vendor/raphalytics.js"></script>
+        <script src="js/vendor/g.raphael-min.js"></script>
+        <script src="js/vendor/g.line-min.js"></script>
+        <script type='text/javascript'>
+            window.onload=function () {
+// ---------------------------------------------------------- Raphalytics example 
+                // var r=Raphael('holder');
+// 				
+                // var labels = ['1st','2nd','3rd','4th'],
+                    // labelsLong = [['Tooltip 1-1','Tooltip 1-2','Tooltip 1-3','Tooltip 1-4'],['Tooltip 2-1','Tooltip 2-2','Tooltip 2-3','Tooltip 2-4']],
+                    // data = [[11,212,123,453],[243,123,352,300]];
+// 
+                // r.raphalytics(data,labels,labelsLong,{'width':800,'height':500,'gridtype':'full_grid','fill':true,'color':['#f00','#0f0']});
+            
+// ---------------------------------------------------------- Raphael Analytics test
+			
+			//var Paper = Raphael("raphaelHolder",400,220);
+			
+			var c= Raphael("raphaelHolder", 400, 220);
+    		var y1 = c.path("M0 120").attr({stroke:"#e9a244","stroke-width":3});
+   			var y2 = c.path("M40 120").attr({stroke:"#e9a244","stroke-width":3});
+   			var y3 = c.path("M100 60").attr({stroke:"#e9a244","stroke-width":3});
+   			var y4 = c.path("M160 60").attr({stroke:"#e9a244","stroke-width":3});
+   			var y5 = c.path("M240 140").attr({stroke:"#e9a244","stroke-width":3});
+   			var y6 = c.path("M300 140").attr({stroke:"#e9a244","stroke-width":3});
+   			var y7 = c.path("M320 160").attr({stroke:"#e9a244","stroke-width":3});
+   			var y8 = c.path("M360 160").attr({stroke:"#e9a244","stroke-width":3});
+
+		    y1.animate({path:"M0 120 L40 120"}, 100, function() {
+		        y2.animate({path:"M40 120 L 100 60"}, 100,function(){
+		       		y3.animate({path:"M100 60 L 160 60"}, 100,function(){
+		        		y4.animate({path:"M160 60 L 240 140"}, 100,function(){
+		        			y5.animate({path:"M240 140 L 300 140"}, 100,function(){
+		        				y6.animate({path:"M300 140 L 320 160"}, 100,function(){
+		        					y7.animate({path:"M320 160 L 360 160"}, 100,function(){
+		        						y8.animate({path:"M360 160 L 390 120"}, 100,function(){
+		        						});
+		        					});
+		        				});
+		        			});
+		        		});
+		        	});
+		        });
+		    });
+		    
+		    var r1 = c.path("M0 220").attr({stroke:"#d64e51","stroke-width":3});
+		    var r2 = c.path("M115 100").attr({stroke:"#d64e51","stroke-width":3});
+		    var r3 = c.path("M160 100").attr({stroke:"#d64e51","stroke-width":3});
+		    var r4 = c.path("M230 30").attr({stroke:"#d64e51","stroke-width":3});
+		    var r5 = c.path("M260 30").attr({stroke:"#d64e51","stroke-width":3});
+		    var r6 = c.path("M270 20").attr({stroke:"#d64e51","stroke-width":3});
+		    var r7 = c.path("M360 20").attr({stroke:"#d64e51","stroke-width":3});
+		    var r8 = c.path("M370 30").attr({stroke:"#d64e51","stroke-width":3});
+		    
+		    r1.animate({path:"M0 220 L115 100"}, 100, function() {
+		    	r2.animate({path:"M115 100 L160 100"}, 100, function() {
+		    		r3.animate({path:"M160 100 L230 30"}, 100, function() {
+		    			r4.animate({path:"M230 30 L260 30"}, 100, function() {
+		    				r5.animate({path:"M260 30 L270 20"}, 100, function() {
+		    					r6.animate({path:"M270 20 L360 20"}, 100, function() {
+		    						r7.animate({path:"M360 20 L370 30"}, 100, function() {
+		    							r8.animate({path:"M370 30 L390 10"}, 100, function() {
+		    	
+		    							});
+		    						});
+		    					});
+		    				});
+		    			});
+		    		});
+		    	});
+		    });
+		    
+		    var b1 = c.path("M0 180").attr({stroke:"#51b2d0","stroke-width":3});
+		    var b2 = c.path("M50 180").attr({stroke:"#51b2d0","stroke-width":3});
+		    
+		    b1.animate({path:"M0 180 L50 180"}, 100, function() {
+		    	b2.animate({path:"M50 180 L88 140"}, 100, function() {
+		    	
+		    	});
+		    });
+            
+           // Paper. linechart(0, 0, 380, 212, [0,1,2,3,4,5,6,7,8,9], [[40,40,60,60,45,30,30,20,20,40],[0,20,40,40,60,80,80,90,80,98], [5,5,5,25,25,50,70,70,40,50], [10,10,30,30,35,35,60,60,70,80]], {smooth: false, width:3, colors: ['#e9a244','#d64e51', '#ffffff', '#51b2d0'], symbol: ''});
+           // //Paper.drop(50, 50, "$9.99",60);
+           // var whiteLineEndPoint = Paper.circle(370, 107, 6).attr({stroke: "none", fill: "#ffffff", opacity: 1});
+           // var whiteLineEndPointDot = Paper.circle(370, 107, 3).attr({stroke: "none", fill: "#cccccc", opacity: 1});
+           // var whiteLinePoint = Paper.circle(130, 155, 5).attr({stroke: "none", fill: "#ffffff", opacity: 1});
+           // var whiteLinePointBack = Paper.circle(130, 155, 20).attr({stroke: "#999999", fill: "#ffffff", opacity: .2});
+//            
+           // var yellowLineEndPoint = Paper.circle(370, 125, 6).attr({stroke: "none", fill: "#e9a244", opacity: 1});
+           // var yellowLineEndPointDot = Paper.circle(370, 125, 3).attr({stroke: "none", fill: "#ffffff", opacity: 1});
+           // var yellowLinePoint = Paper.circle(90, 87, 5).attr({stroke: "none", fill: "#ffffff", opacity: 1});
+           // var yellowLinePointBack = Paper.circle(90, 87, 20).attr({stroke: "#999999", fill: "#e9a244", opacity: .2});
+//            
+           // var redLineEndPoint = Paper.circle(370, 13, 6).attr({stroke: "none", fill: "#d64e51", opacity: 1});
+           // var redLineEndPointDot = Paper.circle(370, 13, 3).attr({stroke: "none", fill: "#ffffff", opacity: 1});
+           // var redLinePoint = Paper.circle(330, 48, 5).attr({stroke: "none", fill: "#ffffff", opacity: 1});
+           // var redLinePointBack = Paper.circle(330, 48, 20).attr({stroke: "#999999", fill: "#d64e51", opacity: .2});
+//            
+           // var blueLineEndPoint = Paper.circle(370, 48, 6).attr({stroke: "none", fill: "#51b2d0", opacity: 1});
+           // var blueLineEndPointDot = Paper.circle(370, 48, 3).attr({stroke: "none", fill: "#ffffff", opacity: 1});
+           // var blueLinePoint = Paper.circle(250, 87, 5).attr({stroke: "none", fill: "#ffffff", opacity: 1});
+           // var blueLinePointBack = Paper.circle(250, 87, 20).attr({stroke: "#999999", fill: "#51b2d0", opacity: .2});
+            
+            }
+        </script>
+        <style type="text/css" media="screen">
+            #raphaelHolder {
+                width: 400px;
+                height: 220px;
+                background:#313131;
+            }
+        </style>
+    </head>
+    <body>
+         <div id="raphaelHolder"></div>
+    </body>
+</html>
